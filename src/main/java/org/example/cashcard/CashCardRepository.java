@@ -12,4 +12,6 @@ interface CashCardRepository extends
     CashCard findByIdAndOwner(Long id, String owner);
 
     Page<CashCard> findByOwner(String owner, Pageable pageable);
+
+    boolean existsByIdAndOwner(Long id, String owner);
 }
